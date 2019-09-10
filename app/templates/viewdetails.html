@@ -1,0 +1,102 @@
+{% include 'layout.html' %}
+
+{% block body %}
+<div class="container">
+	<form action="" method='POST'>
+	{% for d in data %}	
+	<div class="row">
+		<div class="input-field s12 m12 13">
+			<input type="text" class="validate" id="first_name" name="first_name" value="{{ d.first_name }}">
+			<label for="first_name">First Name</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="input-field s12 m12 13">
+			<input type="text" class="validate" id="first_name" name="last_name" value="{{ d.last_name }}">
+			<label for="first_name">Second Name</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="input-field s12 m12 13">
+			<input type="text" class="validate" id="first_name" name="father_name" value="{{ d.father_name }}">
+			<label for="first_name">Father Name</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="input-field s12 m12 13">
+			<input type="text" class="validate" id="first_name" name="dof" value="{{ d.dof }}">
+			<label for="first_name">Date of birth</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="input-field s12 m12 13">
+			<input type="text" class="validate" id="first_name" name="phone" value="{{ d.phone }}">
+			<label for="first_name">Phone Number</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="input-field s12 m12 13">
+			<input type="text" class="validate" id="first_name" name="city" value="{{ d.city }}">
+			<label for="first_name">City</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="input-field s12 m12 13">
+			<input type="text" class="validate" id="zip" name="pin" value="{{ d.pin }}">
+			<label for="zip">Pin/Zip</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="input-field s12 m12 13">
+			<input type="text" class="validate" id="district" name="district" value="{{ d.district }}">
+			<label for="district">District</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="input-field s12 m12 13">
+			<input type="text" class="validate" id="state" name="state" value="{{ d.state }}">
+			<label for="state">State</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="input-field s12 m12 13">
+			<input type="text" class="validate" id="first_name" name="martialstatus" value="{{ d.martialstatus }}">
+			<label for="first_name">Matrial Status</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="input-field s12 m12 13">
+			<input type="text" class="validate" id="first_name" name="panno" value="{{ d.pan }}">
+			<label for="first_name">Pan Number</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="input-field s12 m12 13">
+			<input type="text" class="validate" id="first_name" name="aadhar" value="{{ d.aadhar }}">
+			<label for="aadhar">Aadhar</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="input-field s12 m12 13">
+			<input type="text" class="validate" id="first_name" name="email" value="{{ d.email }}">
+			<label for="aadhar">email</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="input-field s12 m12 13">
+			<input type="text" class="validate" id="first_name" name="address" value="{{ d.address }}">
+			<label for="aadhar">P Address</label>
+		</div>
+	</div>
+	{% endfor %}
+	<div class="row">
+		<div class="input-field s12 m6 13">
+			<input class="btn" type="submit" name="accepted" value="Accept"/>
+		</div>
+<!-- 		<div class="input-field s12 m6 13">
+			<input class="btn" type="submit" name="not" value="Reject"/>
+		</div> -->
+	</div>
+	</form>
+</div>
+{% endblock %}

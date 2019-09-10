@@ -1,0 +1,57 @@
+{% include 'layout.html' %}
+
+{% block body %}
+<div class="container">
+	<div class="row">
+		<h3 class="thin">Confirm Payment</h3>
+	</div>
+	<div class="row">
+		<h4 style="font-weight: 150;">Make Payment to</h4>
+	</div>
+	<div class="row">
+		<div class="col s12 m12 13">
+			<p>Name<span style="margin-left: 103px;">:</span><span class="gap" style="margin-left: 30px;">sai yashwanth</span></p>
+			<p>Account Number<span style="margin-left: 30px;">:</span><span class="gap" style="margin-left: 30px;">1234567890</span></p>
+			<p>Account Type<span style="margin-left: 52px;">:</span><span class="gap" style="margin-left: 30px;">saving account</span></p>
+			<p>Bank Name<span style="margin-left: 66px;">:</span><span class="gap" style="margin-left: 30px;">SBI BANK</span></p>
+			<p>IFS Code<span style="margin-left: 83px;">:</span><span class="gap" style="margin-left: 30px;">SBI00001234</span></p>
+		</div>
+	</div>
+	<form class="row" action="" method="post">
+		<table>
+			<caption></caption>
+			<thead>
+				<tr>
+					<th>Date</th>
+					<th>Paticulars</th>
+					<th>Amount</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>06.01.2018</td>
+					<td>Bill payment</td>
+					<td>500</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>Net Payment Charges</td>
+					<td>11</td>
+				</tr>
+				<tr>
+					<td colspan="3"><div class="divider"></div></td>
+				</tr>
+				<tr>
+					<th class="center" colspan="2">Total</th>
+					<th>RS. 511/-</th>
+				</tr>
+			</tbody>
+		</table>
+		<p>Payment through net banking</p>
+		<div class="center">
+			<button type="submit" class="btn z-depth-0 green">Confirm</button>
+			<button type="submit" class="btn z-depth-0 red">Cancel</button>
+		</div>
+	</form>
+</div>
+{% endblock %}

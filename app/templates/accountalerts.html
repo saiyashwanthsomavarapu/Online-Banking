@@ -1,0 +1,82 @@
+{% include 'layout.html' %}
+
+{% block body %}
+<div class="container">
+	<div class="row">
+    <div class="user_details" style="padding-top: 20px;">
+      <div class="row">
+        <div class="image col s12 m4 13 center">
+              <img class="responsive-img z-depth-1" width="200" height="400" style="border:5px solid white;" src="{{ url_for('static',filename='img/spyder1.jpg') }}">
+          </div>
+          <div class="col s12 m8 13">
+            <div class="row">
+              <div class="col s12 m12 13" style="padding-top:20px;">
+                <span class="" style="font-size: 20px;">Name:</span>&nbsp;&nbsp;<span style="font-family:'Didact Gothic', sans-serif;font-size: 20px;">SAI YASWANTH SOMAVARAPU</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12 m6 13">
+                <span class="" style="font-size: 20px;">Phone:</span>&nbsp;&nbsp;<span style="font-family:'Didact Gothic', sans-serif;font-size: 20px;">+9198654321</span>
+              </div>
+              <div class="col s12 m6 13">
+                <span class="" style="font-size: 20px;">Email:</span>&nbsp;&nbsp;<span style="font-family:'Didact Gothic', sans-serif;font-size: 20px;">sai@gmail.com</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12 m6 13">
+                <span class="" style="font-size: 20px;">IFSC:</span>&nbsp;&nbsp;<span style="font-family:'Didact Gothic', sans-serif;font-size: 20px;">SKY00001245</span>
+              </div>
+              <div class="col s12 m6 13">
+                <span class="" style="font-size: 20px;">Date of Birth:</span>&nbsp;&nbsp;<span style="font-family:'Didact Gothic', sans-serif;font-size: 20px;">06/06/1997</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12 m12 13">
+                <span class="" style="font-size: 20px;">Branch:</span>&nbsp;&nbsp;<span style="font-family:'Didact Gothic', sans-serif;font-size: 20px;"></span>
+              </div>
+            </div>
+      </div>
+    </div>
+    <div class="">
+      <div class="row">
+        <div class="col s12 m6 l3" style="border:1px solid black;">
+          <div class="center">
+            <i class="material-icons large center">add</i>
+          </div>
+        </div>
+        <div class="col s12 m6 13">
+          <i class="material-icons large center"></i>
+        </div>
+      </div>
+    </div>
+		<h3>Alert and messages</h3>
+	    <table class="bordered">
+        	<thead>
+          		<tr>
+            		<th colspan="2"> Account no</th>
+                <th >Name</th>
+                <th>Branch</th>
+                <th>Balance</th>
+          		</tr>
+        	</thead>
+	        <tbody>
+	        	{% for gets in get %}
+    	    	<tr>
+            	<td>{{ gets.accountno }}</td>
+            	<td>{{ gets.first_name }} {{ gets.last_name }}</td>
+              <td>{{ gets.branch }}</td>
+              <tb>{{ gets.accbalance }}</tb>
+              <td><input type="button" value="print"  class="btn" onClick='javascript:window.print()'></td>
+          	</tr>
+          	{% endfor %}
+        	</tbody>
+      	</table>
+        <script>
+          function print()
+          {
+            window.print()
+          }
+        </script>
+    </div>
+</div>
+{% endblock %}

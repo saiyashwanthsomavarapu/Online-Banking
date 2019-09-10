@@ -1,0 +1,35 @@
+{% include 'layout.html' %}
+
+{% block style %}
+<style>
+#viewbtn:hover{
+	background-color: pink;
+}
+</style>
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+	<div class="col s12">
+		<table class="borderde">
+			<caption>table title and/or explanatory text</caption>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Date</th>
+				</tr>
+			</thead>
+			{% for get in gets %}
+			<tbody>
+				<tr>
+					<td>{{ get.first_name}}  {{ get.last_name }}</td>
+					<td><a href="register_member/{{get.id}}">View</a></td>
+					<td><button id="viewbtn" class="btn white black-text z-depth-0" style="border:1px solid black;">View</button></td>
+				</tr>
+			</tbody>
+			{% endfor %}
+		</table>
+	</div>
+</div>
+{% endblock %}

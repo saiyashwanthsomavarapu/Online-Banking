@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Online Banking</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Bootstrap core CSS     -->
+    <link href="{{url_for('static',filename='css/admin/bootstrap.min.css')}}" rel="stylesheet" />
+    <!--  Material Dashboard CSS    -->
+    <link href="{{url_for('static',filename='css/admin/material-dashboard.css')}}" rel="stylesheet" />
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="{{ url_for('static',filename='css/admin/demo.css')}}" rel="stylesheet" />
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<div class="wrapper">
+        <div class="sidebar" data-color="purple">
+            <div class="logo">
+                <a href="http://www.creative-tim.com" class="simple-text">
+                    Admin Controler
+                </a>
+            </div>
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+                    <li>
+                        <a href="/dashboard">
+                            <i class="material-icons">dashboard</i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="/admintable">
+                            <i class="material-icons">person</i>
+                            <p>User Profile</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/allbranches">
+                            <i class="material-icons">content_paste</i>
+                            <p>Table List</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+            <nav class="navbar navbar-transparent navbar-absolute">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"> Profile </a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="material-icons">notifications</i>
+                                    <span class="notification">5</span>
+                                    <p class="hidden-lg hidden-md">Notifications</p>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">Mike John responded to your email</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="material-icons">person</i>
+                                    <p class="hidden-lg hidden-md">Profile</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="content">
+                <div class="container-fluid">
+                	<div class="row">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-header" data-background-color="purple">
+                                    <h4 class="title">Edit Profile</h4>
+                                    <p class="category">Complete your profile</p>
+                                </div>
+                                <div class="card-content">
+                                    <form action="" method="POST">
+                                        {% for d in data %}
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Fist Name</label>
+                                                    <input type="text" name="first_name" class="form-control" value="{{ d.first_name }}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Last Name</label>
+                                                    <input type="text" name="last_name" class="form-control" value="{{ d.last_name }}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12"><!--edhipage-->
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Father Name</label>
+                                                    <input type="text" name="father_name" class="form-control" value="{{ d.father_name }}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6"><!--edhipage-->
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Date of Birth</label>
+                                                    <input type="text" name="dof" class="form-control" value="{{ d.dof }}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6"><!--edhipage-->
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Phone</label>
+                                                    <input type="text" name="phone" class="form-control" value="{{ d.phone }}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">ity</label>
+                                                    <input type="text"  name="city" class="form-control" value="{{ d.city }}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Pin</label>
+                                                    <input type="text" name="pin" class="form-control" value="{{ d.pin }}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6"><!--edhipage-->
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">District</label>
+                                                    <input type="text" name="district" class="form-control" value="{{ d.district }}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6"><!--edhipage-->
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Aadhar</label>
+                                                    <input type="text" name="aadhar" class="form-control" value="{{ d.aadhar }}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12"><!--edhipage-->
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">state</label>
+                                                    <input type="text" name="state" class="form-control" value="{{ d.state }}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Martial Status</label>
+                                                    <input type="text"  name="matrialstatus" class="form-control" value="{{ d.martialstatus }}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Pan</label>
+                                                    <input type="text" class="form-control" name="panno" value="{{ d.pan }}">
+                                                </div>
+                                            </div>
+                                        </div>
+ 
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Email</label>
+                                                    <input type="text" name="email" class="form-control" value="{{ d.email }}">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Country</label>
+                                                    <input type="text" name="country" class="form-control" value="{{ d.country }}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                         {% endfor %}
+                                        <input type="submit"  class="btn btn-primary pull-right" name="accepted" value="accept">
+                                        <div class="clearfix"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="ps-scrollbar-x-rail" style="left:0px;bottom:-39;">
+                <div class="ps-scrollbar-x" tabindex="0" style="left:0px;width:0px;"></div>
+            </div>
+            <div class="ps-scrollbar-y-rail" style="top:39px;height:637px; right:0px;">
+                <div class="ps-scrollbar-y" tabindex="0" style="top:22px;height:360px;"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<!--   Core JS Files   -->
+<script src="{{ url_for('static',filename='js/admin/jquery-3.2.1.min.js')}}" type="text/javascript"></script>
+<script src="{{ url_for('static',filename='js/admin/bootstrap.min.js')}}" type="text/javascript"></script>
+<script src="{{ url_for('static',filename='js/admin/material.min.js')}}" type="text/javascript"></script>
+<!--  Charts Plugin -->
+<script src="{{ url_for('static',filename='js/admin/chartist.min.js')}}"></script>
+<!--  Dynamic Elements plugin -->
+<script src="{{ url_for('static',filename='js/admin/arrive.min.js')}}"></script>
+<!--  PerfectScrollbar Library -->
+<script src="{{ url_for('static',filename='js/admin/perfect-scrollbar.jquery.min.js')}}"></script>
+<!--  Notifications Plugin    -->
+<script src="{{ url_for('static',filename='js/admin/bootstrap-notify.js')}}"></script>
+<!--  Google Maps Plugin    -->
+<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
+<!-- Material Dashboard javascript methods -->
+<script src="{{ url_for('static',filename='js/admin/material-dashboard.js')}}"></script>
+<!-- Material Dashboard DEMO methods, don't include it in your project! -->
+<!-- <script src="{{ url_for('static',filename='js/admin/demo.js')}}"></script> -->
+
+
+</html>

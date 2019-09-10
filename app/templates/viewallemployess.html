@@ -1,0 +1,79 @@
+{% include 'layout.html' %}
+
+{% block body %}
+<div class="row">
+	<div class="col s12 m3 13">
+		<h3 class="thin center">All Employees</h3>
+	</div>
+</div>
+<div class="divider"></div>
+<div class="container">
+  	<div class="row">
+    	<div class="col s12">
+      		<ul class="tabs">
+        		<li class="tab col s3"><a class="black-text" href="#allbranch">All Employees</a></li>
+        		<li class="tab col s3"><a class="black-text" href="#modal1">Add+</a></li>
+      		</ul>
+    	</div>
+  	</div>
+	<div class="row" id="allbranch">
+		<table class="highlight">
+			<caption>table title and/or explanatory text</caption>
+			<thead>
+				<tr>
+					<th>Profile</th>
+					<th>Name</th>
+					<th>View</th>
+					<th>Edit</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><img class="circle" width="70" height="70" src="{{ url_for('static',filename='img/sai.jpg') }}"/></td>
+					<td>s sai yashwanth</td>
+					<td><a href="">view</a></td>
+					<td><a href="">Edit</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="row" id="modal1">
+		<h3 class="thin">Add Branch</h3>
+		<form action="" method="post">
+			<div class="row">
+				<div class="input-field s12 m12 13">
+					<input type="text" id="ifsc" name="ifsc" class="validate">
+					<label for="ifsc">IFSC Code</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field s12 m12 13">
+					<input type="text" id="branchcode" name="branch_code" class="validate">
+					<label for="branchcode">Branch Code</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field s12 m12 13">
+					<textarea id="branchaddress" name="brnachaddress" class="materialize-textarea"></textarea>
+					<label for="brnachaddress">Branch Address</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field s12 m12 13">
+					<input type="text" id="city" name="city" class="validate">
+					<label for="city">City</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field s12 m12 13">
+					<input type="text" id="state" name="state" class="validate">
+					<label for="state">State</label>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button style="border:1px solid black;" class="modal-action btn-flat">Add</button>
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock %}

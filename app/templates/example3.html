@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>onlie banking</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	<script src="https://use.fontawesome.com/cf3c7a7aaa.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/materialize.min.css') }}"  media="screen,projection"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<style>
+		body,html{
+			margin: 0px;
+			padding: 0px;
+			overflow: auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="row">
+		<div class="col s12 m2 13" style="background-color:#f6f6f6;padding-bottom: 100%;">
+			<h4>Online Bank</h4>
+		</div>
+		<div class="col s12 m10 13" style="margin:0px;padding:0px;overflow-y:auto;height:100%;">
+			<div class="row"> 
+				<div class="col s12">
+					<p><i class="material-icons">person</i><span class="thin" style="margin-top:-0px;position:absolute;font-size:18px;">Hi,sai yashwanth</span><i class="material-icons" style="margin-left:133px;margin-top:5px;">keyboard_arrow_down</i>
+					</p>
+				</div>
+			</<div>
+				
+			</div>											
+			<div class="row">
+				<div class="col s12  m12 13">
+					<h5 class="thin" style="">WELCOME TO YOUR</h5>
+					<h4>Bank Account</h4>
+				</div>
+			</div>
+			<div class="row" style="">
+				<div class="col s12 m12 13">
+					<ul class="tabs center" style="color:blue;margin: 0px;">
+        				<li class="tab col s3"><a target="_self" class="grey-text" href="/example">Balance</a></li>
+        				<li class="tab col s3"><a target="_self" class="grey-text"  href="/example2">Transactions</a></li>
+   	    				<li class="tab col s3"><a class="active grey-text" href="#test1">Transfer</a></li>
+      				</ul>
+    			</div>
+			    <div id="test1" class="col s12" style="">
+			    	<div class="" style="padding:20px;">
+			    		<h5 class="thin">Fund Transfer</h5>
+			    		<p>Fund Transfer menu provide you to make fund transfers between your different accounts as well as making a transfer to a third party. You can even make an enquiry about your transfers and view the pending transfers through this menu.</p>
+						<form action="" method="post">
+					<div class="col s12 m8 13">
+						<span class="thin" style="font-size:45px;">Make Payment</span>
+						<div class="row">
+							<div class="input-field col s12 ">
+								<input class="validate" type="text" name="acc_holder" id="acc_holder">
+								<label for="acc_holder">To Holder</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12 ">
+								<input class="validate" type="text" name="acc_money" id="acc_money">
+								<label for="acc_money">Amount</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12 ">
+								<input class="validate" type="text" name="acc_number" id="acc_number">
+								<label for="acc_number">Account Number</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12 ">
+								<input class="validate" type="text" name="acc_ifsc" id="acc_ifsc">
+								<label for="acc_ifsc">IFSC</label>
+							</div>
+						</div>
+						<!-- <div class="g-recaptcha" data-sitekey="6LeD3z4UAAAAAL7lXz0ZVT2Jhqpl7mnKznQTpGBL"></div> -->
+						<div class="row">
+							<div class="right-align">
+								<button  class="btn">Pay</button>
+							</div>
+						</div>
+					</div>
+					</form>
+			    	</div>
+			    </div>
+  			</div>
+		</div>
+	</div>
+	<script>
+	$(document).ready(function(){
+    	$('ul.tabs').tabs();
+ 	 });
+	</script>
+	<script src="{{ url_for('static', filename='js/js.js' )}}"type="text/javascript" charset="utf-8" async defer></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
+</body>
+</html>

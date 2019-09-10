@@ -1,0 +1,23 @@
+{% include 'layout.html' %}
+
+{% block body %}
+<form action="" method="post">
+	<div class="container">
+		<div class="row">
+			<div class="input-field col s12 m12 13">
+				<input type="text" id="loginid" name="login" class="validate" />
+				<label for="loginid">user name</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12 m12 13">
+				<input type="password" id="pass" name="password" class="validate" />
+				<label for="pass">password</label>
+			</div>
+		</div>
+		<div class="right-align">
+			<button class="btn">login</button>
+		</div>
+	</div>
+</form>
+{% endblock %}

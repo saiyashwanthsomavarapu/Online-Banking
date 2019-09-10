@@ -1,0 +1,57 @@
+<nav>
+  <div class="nav-wrapper white">
+    <a href="#!" class="brand-logo black-text">Logo</a>
+    <a href="#mobile-demo" data-activates="mobile-demo" class="button-collapse"><i class="material-icons black">menu</i></a>
+    {% if session["adminid"] %}
+      <ul class="right hide-on-med-and-down">
+        <li><a class="black-text" href="admindashboard.php">Dashboard</a></li>
+        <li><a class="black-text" href="viewbranch.php">Settings</a></li>
+        <li><a class="black-text" href="viewcustomer.php">customers</a></li>
+        <li><a class="black-text" href="viewtransaction.php">Transactions</a></li>
+        <li><a class="black-text" href="mailinbox.php">Mail</a></li>
+        <li><a class="black-text" href="logout.php">logout</a></li>
+      </ul> 
+    {% elif session["employeeid"] %}
+      <ul class="right hide-on-med-and-down">
+        <li><a class="black-text" href="employeeaccount.php">My accounts</a></li>
+        <li><a class="black-text" href="viewcustomer.php">customers</a></li>
+        <li><a class="black-text" href="payloans.php">Loan account</a></li>
+        <li><a class="black-text" href="viewtransaction.php">View transaction</a></li>
+        <li><a class="black-text" href="mailinbox.php">Mail</a></li>
+        <li><a class="black-text" href="logout.php">logout</a></li>
+      </ul> 
+    {% elif session["custmid"] %}
+      <ul class="right hide-on-med-and-down">
+        <li><a class="black-text" href="/accountalerts">My accounts</a></li>
+        <li><a class="black-text" href="/transferfunds">Transfer funds</a></li>
+        <li><a class="black-text" href="payloans.php">Pay loans</a></li>
+        <li><a class="black-text" href="/mailinbox">Mails</a></li>
+        <li><a class="black-text" href="/personal_info">Personalise</a></li>
+        <li><a class="black-text" href="/logout">logout</a></li>
+      </ul>
+    {% else %}
+      <ul class="right hide-on-med-and-down black-text">
+        <li><a class="black-text" href="/">Home</a></li>
+        <li><a class="black-text" href="s">Services</a></li>
+        <!-- <li><a class="black-text" href="">Help</a></li> -->
+        <li><a class="black-text" href="/register"></a></li>
+        <li><a class="black-text" href="/login">Login</a></li>
+      </ul>
+    {% endif %}
+      <ul class="side-nav" id="mobile-demo">
+        <li><a class="black-text" href="sass.html">Sass</a></li>
+        <li><a class="black-text" href="badges.html">Components</a></li>
+        <li><a class="black-text" href="collapsible.html">Javascript</a></li>
+        <li><a class="black-text" href="mobile.html">Mobile</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div id="login" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>

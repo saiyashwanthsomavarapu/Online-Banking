@@ -1,0 +1,97 @@
+{% include 'layout.html' %}
+
+{% block body %}
+<div class="row">
+	<div class="col s12 m3 13">
+		<h3 class="thin center">Profile</h3>
+	</div>
+</div>
+<div class="divider"></div>
+<div class="container">
+	{% for r in result1 %}
+	<div class="personal_detail" style="margin-top:20px;">
+		<div class="row">
+			<div class="input-field col s12 m12 13">
+				<input type="text" id="person_name" name="person_name" value="{{ r.first_name }} {{ r.last_name}}" readonly />
+				<label for="person_name">Name</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12 m12 13">
+				<input type="text" id="person_sof" name="person_sof" value="{{ r.father_name }}" readonly />
+				<label for="person_sof">s/o</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12 m12 13">
+				<input type="email" id="person_email" name="person_email" value="{{ r.email }}" readonly />
+				<label for="person_email">Email</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12 m12 13">
+				<input type="text" id="person_phone" name="person_phone" value="{{ r.phone }}" readonly />
+				<label for="person_Phone">Phone Number</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12 m12 13">
+				<input type="text" id="person_dob" name="person_dob" value="{{  r.dof }}" readonly />
+				<label for="person_dob">Date of Birth</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12 m12 13">
+				<input type="text" id="person_account" name="person_account" value="2345698742224511" readonly />
+				<label for="person_name">Account Number</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12 m6 13">
+				<input type="text" id="person_accbranch" name="person_accbranch" value="" readonly />
+				<label for="person_name">Branch</label>
+			</div>
+			<div class="input-field col s12 m6 13">
+				<input type="text" id="person_ifsc" name="person_ifsc" value="sai" readonly />
+				<label for="person_ifsc">IFS Code</label>
+			</div>
+		</div>
+		<div class="row">
+        	<div class="input-field col s12 m12 13">
+          		<textarea id="textarea1" class="materialize-textarea" name="branch_address"></textarea>
+          		<label for="textarea1">Branch Address</label>
+        	</div>
+      	</div>
+		<div class="row">
+        	<div class="input-field col s12 m12 13">
+          		<textarea id="textarea1" class="materialize-textarea" value='{{ r.address }}' name="your_address">{{ r.address }}</textarea>
+          		<label for="textarea1">Your Address</label>
+        	</div>
+      	</div>
+      	{% endfor %}
+      	<div class="row">
+      		<div class="col s12 m6 13">
+      			<h3 class="thin">Password Update</h3>
+      		</div>
+      	</div>
+      	<form action="" method="post">
+      		<div class="row">
+      			<div class="input-field col s12 m6 13">
+      				<input type="password" name="password" id="person_pass">
+      				<label for="person_pass">Password</label>
+      			</div>
+      			<div class="input-field col s12 m6 13">
+      				<input type="password" name="cpassword" id="person_cpass">
+      				<label for="person_pass">Confirm Password</label>
+      			</div>
+      		</div>
+      		<div class="row">
+      			<div class="right-align">
+      				<button type="submit" class="btn">Update</button>
+      			</div>
+      		</div>
+      	</form>
+	</div>
+</div>
+
+{% endblock %}

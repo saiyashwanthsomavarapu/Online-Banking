@@ -1,0 +1,99 @@
+{% include 'layout.html' %}
+
+{% block body %}
+<div class="image">
+	<img class="img-responsive" height="" width="100%" src="{{ url_for('static', filename='img/1162.jpg')}}">
+</div>
+<div class="content">
+	<div class="container">
+		<div class="sub_content1">
+			<h3 class="thin center">Our Services</h3>
+			<hr width="100" color="green" >
+			<h4 class="" style="font-size:22px;text-align: center;color:#c6c6c6;font-family:'Poiret One', cursive;">Whether you are opening your first bank account or have managed a checking account for years, we will provide you with different types of banking services availabele</h4>
+			<div class="row">
+				<div class="col s12 m4 13 ">
+					<div class="item center" style="padding: 10px 0px 0px 0px;">
+						<i class="fa fa-university large center" ></i><br>
+						<div class="service_item_content" style="padding:10px 0px 10px 0px;font-family: 'Poiret One', cursive;font-style: normal;">
+							<span style="font-size: 30px;">Individual Banking</span>
+							<p style="font-size: 19px;font-weight:200;font-family:'Didact Gothic', sans-serif;">We offer a variety of services to assist individuals in managing their accounts.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m4 13">
+					<div class="item center" style="padding: 10px 0px 0px 0px;">
+						<i class="fa fa-bar-chart large center" ></i>
+						<div class="service_item_content" style="padding:10px 0px 10px 0px;font-family: 'Poiret One', cursive;font-style: normal;">
+							<span style="font-size: 30px;">Business Banking</span>
+							<p style="font-size: 19px;font-weight:200;font-family:'Didact Gothic', sans-serif;">We offer financial services for business owners who need to differential finances.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m4 13">
+					<div class="item center" style="padding: 10px 0px 0px 0px;">
+						<i class="fa fa-thumbs-o-up large center"></i>
+						<div class="service_item_content" style="padding:10px 0px 10px 0px;font-family: 'Poiret One', cursive;font-style: normal;">
+							<span style="font-size: 30px;">Digital Banking</span>
+							<p style="font-size: 19px;font-weight:200;font-family:'Didact Gothic', sans-serif;">You can manage your accounts online from your computer, tablet, or smartphone.</p>
+						</div>
+					</div>			
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12 m4 13"></div>
+				<div class="col s12 m4 13">
+					<div class="item center">
+						<i class="fa fa-shield large"></i>
+						<div calss="service_item_content" style="padding: 10px 0px 0px 0px;font-family: 'Poiret One', cursive;font-style: normal;">
+							<span style="font-size: 30px;">Easy &amp; Secure</span>
+							<p style="font-size: 19px;font-family: 'Didact Gothic', sans-serif;">Your account transactions very secure and confidential</p>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m4 13"></div>
+			</div>
+		</div>
+	</div>
+	<div class="sub_content2">
+		<h3 class="thin center">Loans &amp; Payments</h3>
+		<hr width="100" color="green">
+		<h4 class="" style="font-size:22px;text-align: center;color:#c6c6c6;font-family:'Poiret One', cursive;">Loans are a common banking service we offer, and they come in all shapes and sizes</h4>
+		<div id="loans" style="background-color:;">
+			<div class="">
+				<div class="row">
+					<div class="col s12 m6 13">
+						<div class="heading" style="margin-left:20px;">
+							<h4 class="thin">Stunning Repayment Flexibility for Your Loan</h4>
+							<hr width="100" color="green" align="left">
+							<p style="font-size: 19px;font-family: 'Didact Gothic', sans-serif;">Paying off your personal loans gets easy with our online dashboard</p>
+							<div class="points">
+								<div class="point">
+									<p style="font-size:22px;font-family:'Didact Gothic', sans-serif; "><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<span>Choose your preferred monthly payment</span></p>
+									<p style="font-size:22px;font-family:'Didact Gothic', sans-serif;"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<span>Increase your payment amount anytime</span></p>
+									<p style="font-size:22px;font-family:'Didact Gothic', sans-serif;"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<span>Make extra or easly payment without fees</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6 13">
+						<img class="responsive-img" src="{{ url_for('static',filename='img/save.jpg') }}" >
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="sub_content3">
+		<div class="container">
+			<div class="row">
+				<div class="col s12 m12 13 center">
+					<p style="font-family:'Didact Gothic', sans-serif;font-size: 22px;text-align:center; ">Banking on a personal level. Outstanding customer service tailored to each individual and people who know you by name.</p>
+				
+					<i class="fa fa-university large center" ></i><br>
+					<p style="font-family: 'Didact Gothic',sans-serif;font-size: 22px;text-align: center;">still have some question visit to nearest bank</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

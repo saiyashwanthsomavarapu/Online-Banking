@@ -1,0 +1,63 @@
+{% include 'layout.html' %}
+
+{% block body %}
+<div class="container">
+	<div class="row">
+		<form action="" method="post">
+		<div class="col s12 m8 13">
+			<span class="thin" style="font-size:45px;">Make Payment</span>
+			<div class="row">
+				<div class="input-field col s12 ">
+					<input class="validate" type="text" name="acc_holder" id="acc_holder">
+					<label for="acc_holder">To Holder</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12 ">
+					<input class="validate" type="text" name="acc_money" id="acc_money">
+					<label for="acc_money">Amount</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12 ">
+					<input class="validate" type="text" name="acc_number" id="acc_number">
+					<label for="acc_number">Account Number</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12 ">
+					<input class="validate" type="text" name="acc_ifsc" id="acc_ifsc">
+					<label for="acc_ifsc">IFSC</label>
+				</div>
+			</div>
+			<!-- <div class="g-recaptcha" data-sitekey="6LeD3z4UAAAAAL7lXz0ZVT2Jhqpl7mnKznQTpGBL"></div> -->
+			<div class="row">
+				<div class="right-align">
+					<button  class="btn">Pay</button>
+				</div>
+			</div>
+		</div>
+		</form>
+		<div class="col s12 m4 13">
+			<span class="thin" style="font-size: 45px;">Transfer Funds</span>
+			<div class="row">
+				<div class="col s12 m12 13" style="padding-bottom:10px;">
+					<a href="#" >Add External payee</a>
+				</div>
+				<div class="col s12 m12 13" style="padding-bottom:10px;">
+					<a href="#">View Register Payee</a>
+				</div>
+				<div class="col s12 m12 13" style="padding-bottom:10px;">
+					<a href="#">Make a Payment</a>
+				</div>
+				<div class="col s12 m12 13" style="padding-bottom:10px;">
+					<a href="#">Payments Made</a>
+				</div>
+				<div class="col s12 m12 13" style="padding-bottom:10px;">
+					<a href="#">Pending Payments</a>
+				</div>
+			</div>			
+		</div>
+	</div>
+</div>
+{% endblock %}

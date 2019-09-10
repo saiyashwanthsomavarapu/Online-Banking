@@ -1,0 +1,32 @@
+{% include 'layout.html' %}
+
+{% block body %}
+<div class="container">
+	<div class="row">
+		<div class="col s12 m8 13">
+			<span class="thin" style="font-size: 45px;">Fund Transfer</span>	
+			<p>Fund Transfer menu provide you to make fund transfers between your different accounts as well as making a transfer to a third party. You can even make an enquiry about your transfers and view the pending transfers through this menu.</p>
+		</div>
+		<div class="col s12 m4 13">
+			<span class="thin" style="font-size: 45px;">Transfer Funds</span>
+			<div class="row">
+				<div class="col s12 m12 13" style="padding-bottom:10px;">
+					<a href="#" >Add External payee</a>
+				</div>
+				<div class="col s12 m12 13" style="padding-bottom:10px;">
+					<a href="#">View Register Payee</a>
+				</div>
+				<div class="col s12 m12 13" style="padding-bottom:10px;">
+					<a href="/makepayment">Make a Payment</a>
+				</div>
+				<div class="col s12 m12 13" style="padding-bottom:10px;">
+					<a href="/viewtransactionlist">Payments Made</a>
+				</div>
+				<div class="col s12 m12 13" style="padding-bottom:10px;">
+					<a href="#">Pending Payments</a>
+				</div>
+			</div>			
+		</div>
+	</div>
+</div>
+{% endblock %}
